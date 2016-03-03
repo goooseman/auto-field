@@ -1,4 +1,4 @@
-# Meteor Auto Field
+# Meteor Auto Fields
 
 Allows you to automaticly create field values, based on other object fields on every save operation (update/save). Something like a before_save hook in RoR. This fields are stored in the db.
 
@@ -7,7 +7,7 @@ Allows you to automaticly create field values, based on other object fields on e
 Installation:
 
 ```
-meteor add goooseman:auto-field
+meteor add goooseman:auto-fields
 ```
 
 ### Usage
@@ -21,7 +21,7 @@ var fields = {
   }
 }
 
-test.autoField(fields);
+test.autoFields(fields);
 ```
 
 Will create a fullName field, based on firstName and lastName fields in the db on every save operation.
@@ -44,6 +44,6 @@ var fields = {
   }
 }
 
-books.autoField(fields);
+books.autoFields(fields);
 ```
 Will create an `authorName` for every book object on each save operation.
