@@ -2,7 +2,7 @@ Package.describe({
   name: 'auto-field',
   version: '1.0.0',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Automaticly create collection fields on every save operation (insert/update). Like a before_save in RoR.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/goooseman/auto-field',
   // By default, Meteor will default to using README.md for documentation.
