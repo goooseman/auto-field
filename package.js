@@ -2,7 +2,7 @@ Package.describe({
   name: 'goooseman:auto-fields',
   version: '1.0.1',
   // Brief, one-line summary of the package.
-  summary: 'Automaticly create collection fields on every save operation (insert/update). Like a before_save in RoR.',
+  summary: 'Automaticly create collection fields on every save operation. Like a before_save in RoR.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/goooseman/auto-fields',
   // By default, Meteor will default to using README.md for documentation.
