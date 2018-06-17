@@ -1,6 +1,6 @@
 Package.describe({
   name: 'goooseman:auto-fields',
-  version: '1.0.1',
+  version: '1.0.2',
   // Brief, one-line summary of the package.
   summary: 'Automaticly create collection fields on every save operation. Like a before_save in RoR.',
   // URL to the Git repository containing the source code for this package.

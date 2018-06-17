@@ -16,7 +16,10 @@ Mongo.Collection.prototype.autoFields = function (fields) {
 
     }
     for (let functionName of Object.keys(fields)) {
-      modifier.$set[functionName] = fields[functionName](doc, userId);
+      const newValue = fields[functionName](doc, userId);
+      if (doc[functionName] !== newValue) {
+        modifier.$set[functionName] = newValue;
+      }
     }
   });
 };
