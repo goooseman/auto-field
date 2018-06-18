@@ -8,7 +8,6 @@ Mongo.Collection.prototype.autoFields = function (fields) {
   });
 
   collection.before.update(function (userId, doc, fieldNames, modifier) {
-    modifier.$set = modifier.$set || {};
     try {
       // Use minimongo package to simulate transform of the object
       Package.minimongo.LocalCollection._modify(doc, modifier);
@@ -18,6 +17,7 @@ Mongo.Collection.prototype.autoFields = function (fields) {
     for (let functionName of Object.keys(fields)) {
       const newValue = fields[functionName](doc, userId);
       if (doc[functionName] !== newValue) {
+        modifier.$set = modifier.$set || {};
         modifier.$set[functionName] = newValue;
       }
     }
